@@ -151,7 +151,7 @@
 
         #endregion
 
-        private TextBox textBox1;
+        
         private Panel panel2;
         private Panel panel1;
         private Button button2;

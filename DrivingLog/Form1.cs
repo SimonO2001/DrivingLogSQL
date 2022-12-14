@@ -1,7 +1,14 @@
+using Microsoft.Data.SqlClient;
+using System.Data;
+
 namespace DrivingLog
 {
     public partial class Form1 : Form
     {
+
+        
+
+
         public Form1()
         {
             InitializeComponent();
@@ -64,5 +71,9 @@ namespace DrivingLog
             Form6 f6 = new Form6();
             f6.ShowDialog();
         }
+
+        
+
+
     }
 }

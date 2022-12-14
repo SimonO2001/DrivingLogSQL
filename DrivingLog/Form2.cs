@@ -9,23 +9,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
 
 namespace DrivingLog
 {
     public partial class Form2 : Form
     {
-        MySqlConnection sqlConn = new MySqlConnection();
-        MySqlCommand sqlCmd = new MySqlCommand();
-        DataTable sqlDT = new DataTable();
-        String sqlQuerry;
-        MySqlDataAdapter DtA = new MySqlDataAdapter();
 
+        Bitmap Bitmap;
+
+         
+        SqlCommand sqlcmd = new SqlCommand();
+
+        string sqlQuery;
+        SqlDataAdapter Dta = new SqlDataAdapter();
+        SqlDataReader sqlRd;
         DataSet DS = new DataSet();
 
-        string server = "localhost";
-        string username = "Adminsimon";
-        string password = "Passw0rd";
-        string database = "DrivingLogDB";
+        SqlConnection sqlconn = new SqlConnection (@"Server=tcp:simon140401.database.windows.net,1433;Initial Catalog=DrivingLogDB;Persist Security Info=False;User ID=AdminSimon;Password=Passw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
 
         public Form2()
@@ -33,13 +34,7 @@ namespace DrivingLog
             InitializeComponent();
         }
 
-        private void uploadData()
-        {
-            
-                    
-
-
-        }
+        
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -60,13 +55,13 @@ namespace DrivingLog
         {
             try
             {
-                foreach(Control c in panel1.Controls)
+                foreach (Control c in panel1.Controls)
                 {
                     if (c is TextBox)
                     {
                         ((TextBox)c).Clear();
                     }
-                    
+
                 }
 
 
@@ -76,5 +71,57 @@ namespace DrivingLog
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                sqlconn.Open();
+                sqlQuery = "INSERT INTO [User] ([Name], [NrPlade]) VALUES(" + "'" + textBox2.Text + "'" + ", " + "'" + textBox3.Text + "'" + ")";
+
+                sqlcmd = new SqlCommand(sqlQuery, sqlconn);
+                sqlRd = sqlcmd.ExecuteReader();
+                sqlconn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlconn.Close();
+            }
+            upLoadData();
+            foreach (Control c in panel1.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Clear();
+                }
+
+            }
+        }
+
+        private void upLoadData()
+        {
+            sqlconn.Open();
+            sqlcmd.Connection = sqlconn;
+            sqlcmd.CommandText = "SELECT * FROM[User]";
+
+            sqlRd = sqlcmd.ExecuteReader();
+
+            sqlRd.Close();
+            sqlconn.Close();
+
+        }
+
     }
+
+        
+
+
+    
 }

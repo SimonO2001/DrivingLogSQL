@@ -37,8 +37,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,8 +72,6 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -134,23 +130,6 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Opdater";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(150, 359);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 29);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Dato :";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(236, 365);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(218, 23);
-            this.textBox4.TabIndex = 6;
             // 
             // textBox3
             // 
@@ -222,8 +201,6 @@
         private Panel panel4;
         private Label label5;
         private Button button1;
-        private Label label3;
-        private TextBox textBox4;
         private TextBox textBox3;
         private Label label2;
         private Label label1;
