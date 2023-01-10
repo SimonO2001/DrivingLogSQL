@@ -72,8 +72,9 @@ namespace DrivingLog
             f6.ShowDialog();
         }
 
-        
+        private void button6_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

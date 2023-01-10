@@ -78,7 +78,7 @@ namespace DrivingLog
             try
             {
                 sqlconn.Open();
-                sqlQuery = "INSERT INTO [User] ([Name], [NrPlade]) VALUES(" + "'" + textBox2.Text + "'" + ", " + "'" + textBox3.Text + "'" + ")";
+                sqlQuery = "INSERT INTO [User] ([Name]) VALUES(" + "'" + textBox2.Text + "'" + ")";
 
                 sqlcmd = new SqlCommand(sqlQuery, sqlconn);
                 sqlRd = sqlcmd.ExecuteReader();
@@ -95,6 +95,8 @@ namespace DrivingLog
                 sqlconn.Close();
             }
             upLoadData();
+
+
             foreach (Control c in panel1.Controls)
             {
                 if (c is TextBox)
