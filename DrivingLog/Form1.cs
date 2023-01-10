@@ -74,7 +74,8 @@ namespace DrivingLog
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            Form7 f7 = new Form7();
+            f7.ShowDialog();
         }
     }
 }
