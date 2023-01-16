@@ -15,6 +15,8 @@ namespace DrivingLog
     {
 
         SqlConnection sqlconn = new SqlConnection(@"Server=tcp:simon140401.database.windows.net,1433;Initial Catalog=DrivingLogDB;Persist Security Info=False;User ID=AdminSimon;Password=Passw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        SqlDataAdapter adpt;
+        DataTable dt;
 
         public Form7()
         {
@@ -36,6 +38,17 @@ namespace DrivingLog
             comboBox2.DataSource = table1;
             comboBox2.DisplayMember = "Name";
             comboBox2.ValueMember = "Id";
+
+            
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            adpt = new SqlDataAdapter("Select * from [LOG] WHERE [Name] = "+"'"+ comboBox2.Text+"'", sqlconn);
+            dt = new DataTable();
+            adpt.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }

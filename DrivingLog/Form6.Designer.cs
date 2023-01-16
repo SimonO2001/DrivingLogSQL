@@ -64,7 +64,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(-5, -8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(809, 467);
+            this.panel1.Size = new System.Drawing.Size(812, 467);
             this.panel1.TabIndex = 3;
             // 
             // comboBox1

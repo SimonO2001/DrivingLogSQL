@@ -53,7 +53,7 @@ namespace DrivingLog
             DialogResult iExit;
             try
             { 
-            iExit = MessageBox.Show("Confirm if you want to exit", "MySQL Connector", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            iExit = MessageBox.Show("Confirm if you want to exit", "Kørselslog", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (iExit == DialogResult.Yes)
             {

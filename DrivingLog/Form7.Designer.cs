@@ -30,13 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -60,10 +60,21 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkOrange;
             this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(502, 112);
+            this.panel3.Location = new System.Drawing.Point(496, 112);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(272, 80);
+            this.panel3.Size = new System.Drawing.Size(283, 80);
             this.panel3.TabIndex = 20;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(84, 23);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(126, 35);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Hent";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel4
             // 
@@ -121,16 +132,6 @@
             this.label1.Size = new System.Drawing.Size(654, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hent liste af logs fra bestemt bruger";
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(73, 23);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 35);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Hent";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form7
             // 
