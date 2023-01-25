@@ -82,7 +82,7 @@ namespace DrivingLog
             sqlconn.Close();
 
         }
-
+            
         private void button2_Click(object sender, EventArgs e)
         {
             try
@@ -101,7 +101,7 @@ namespace DrivingLog
                 MessageBox.Show(ex.Message);
             }
             finally
-            {
+            { 
 
                 sqlconn.Close();
             }

@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -50,13 +47,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,33 +75,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1051, 603);
             this.panel1.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.button7);
-            this.panel7.Controls.Add(this.flowLayoutPanel2);
-            this.panel7.Location = new System.Drawing.Point(551, 477);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(483, 103);
-            this.panel7.TabIndex = 4;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(20, 16);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(449, 66);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Exit";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(481, 30);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel2.TabIndex = 3;
             // 
             // panel6
             // 
@@ -157,11 +131,12 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.button8);
             this.panel5.Controls.Add(this.button6);
             this.panel5.Controls.Add(this.button5);
             this.panel5.Location = new System.Drawing.Point(551, 224);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(483, 188);
+            this.panel5.Size = new System.Drawing.Size(483, 263);
             this.panel5.TabIndex = 3;
             // 
             // button6
@@ -265,6 +240,43 @@
             this.printPreviewDialog1.Visible = false;
             this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(481, 30);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel2.TabIndex = 3;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(20, 16);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(449, 66);
+            this.button7.TabIndex = 3;
+            this.button7.Text = "Exit";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.button7);
+            this.panel7.Controls.Add(this.flowLayoutPanel2);
+            this.panel7.Location = new System.Drawing.Point(551, 477);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(483, 103);
+            this.panel7.TabIndex = 4;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(20, 183);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(449, 66);
+            this.button8.TabIndex = 3;
+            this.button8.Text = "Slet logs fra bestemt bruger";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -274,7 +286,6 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -283,6 +294,7 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -293,9 +305,6 @@
         private Panel panel4;
         private Panel panel3;
         private Panel panel2;
-        private Panel panel7;
-        private Button button7;
-        private FlowLayoutPanel flowLayoutPanel2;
         private Panel panel6;
         private Button button4;
         private Button button3;
@@ -310,5 +319,9 @@
         private Label label1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private PrintPreviewDialog printPreviewDialog1;
+        private Panel panel7;
+        private Button button7;
+        private FlowLayoutPanel flowLayoutPanel2;
+        private Button button8;
     }
 }

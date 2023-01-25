@@ -43,6 +43,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.label5);
@@ -188,6 +190,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Opret en log";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(249, 293);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(142, 16);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Eksempel: yyyy-mm-dd";
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -221,5 +233,6 @@
         private TextBox textBox1;
         private Label label3;
         private ComboBox comboBox1;
+        private Label label6;
     }
 }

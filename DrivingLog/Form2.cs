@@ -15,10 +15,6 @@ namespace DrivingLog
 {
     public partial class Form2 : Form
     {
-
-        Bitmap Bitmap;
-
-         
         SqlCommand sqlcmd = new SqlCommand();
 
         string sqlQuery;

@@ -17,7 +17,7 @@ namespace DrivingLog
         Bitmap bitmap;
 
         SqlConnection sqlconn = new SqlConnection(@"Server=tcp:simon140401.database.windows.net,1433;Initial Catalog=DrivingLogDB;Persist Security Info=False;User ID=AdminSimon;Password=Passw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-        SqlCommand cmd;
+        
         SqlDataAdapter adpt;
         DataTable dt;
 
@@ -89,8 +89,6 @@ namespace DrivingLog
         private void Form4_Load(object sender, EventArgs e)
         {
             showdata();
-            
-
         }
 
         public void showdata()

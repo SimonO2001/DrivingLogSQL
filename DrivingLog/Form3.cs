@@ -13,9 +13,6 @@ namespace DrivingLog
 {
     public partial class Form3 : Form
     {
-        Bitmap Bitmap;
-
-
         SqlCommand sqlcmd = new SqlCommand();
 
         string sqlQuery;
@@ -100,7 +97,7 @@ namespace DrivingLog
             {
                 sqlconn.Open();
                 sqlQuery = "UPDATE [User] SET [Name] ='" + textBox2.Text + "'Where [Name] ='" + textBox1.Text + "'";
-                //sqlQuery = "INSERT INTO [User] ([Name], [NrPlade]) VALUES(" + "'" + textBox2.Text + "'" + ", " + "'" + textBox3.Text + "'" + ")";
+                
 
                 sqlcmd = new SqlCommand(sqlQuery, sqlconn);
                 sqlRd = sqlcmd.ExecuteReader();
